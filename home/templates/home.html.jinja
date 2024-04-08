@@ -1,0 +1,20 @@
+{% extends "base.html.jinja" %}
+
+{% block content %}
+    <div class="hero">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="content">
+        {% for item in entities %}
+        	<section>
+                <h2>{{ item.entity }}</h2>
+                Copper: {{ item.copper }}<br>
+                Silver: {{ item.silver }}<br>
+                {% if item.electrum %}Electrum: {{ item.electrum }}<br>{% endif %}
+                Gold: {{ item.gold }}<br>
+                {% if item.platinum %}Platinum: {{ item.platinum }}{% endif %}
+            </section>
+        {% endfor %}
+
+    </div>
+{% endblock content %}
