@@ -14,7 +14,7 @@ services:
     volumes:
       - .db:/var/lib/postgresql/data
   data_web:
-    image: ghcr.io/skelmis/data.skelmis.co.nz:master
+    image: ghcr.io/skelmis/dnd-money-tracker:master
     container_name: "web_dnd.skelmis.co.nz"
     restart: always
     ports:
