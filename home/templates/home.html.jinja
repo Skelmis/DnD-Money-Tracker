@@ -8,10 +8,10 @@
         {% for item in entities %}
         	<section>
                 <h2>{{ item.entity }}</h2>
-                Copper: {{ item.copper }}<br>
-                Silver: {{ item.silver }}<br>
+                {% if item.copper %}Copper: {{ item.copper }}<br>{% endif %}
+                {% if item.silver %}Silver: {{ item.silver }}<br>{% endif %}
                 {% if item.electrum %}Electrum: {{ item.electrum }}<br>{% endif %}
-                Gold: {{ item.gold }}<br>
+                {% if item.gold %}Gold: {{ item.gold }}<br>{% endif %}
                 {% if item.platinum %}Platinum: {{ item.platinum }}{% endif %}
             </section>
         {% endfor %}
