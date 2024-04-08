@@ -3,7 +3,7 @@ from piccolo.columns import Real, Text, Boolean
 
 
 class Money(Table):
-    entity: str = Text(help_text="The entity this money concerns")
+    entity: str = Text(help_text="The entity this money concerns", required=True)
     copper: float = Real()
     silver: float = Real()
     electrum: float = Real()
