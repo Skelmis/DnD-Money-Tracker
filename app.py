@@ -40,7 +40,9 @@ async def home():
         await item.order_money()
 
     template = ENVIRONMENT.get_template("home.html.jinja")
-    content = template.render(title="Money tracker", entities=entities)
+    content = template.render(
+        title="Echoes of Destiny money tracker", entities=entities
+    )
     return HTMLResponse(content)
 
 
